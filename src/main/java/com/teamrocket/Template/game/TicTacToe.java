@@ -19,4 +19,12 @@ public class TicTacToe {
         this.player = player;
         this.computer = computer;
     }
+
+    public String getField(Integer x, Integer y) {
+        return this.moves[x][y];
+    }
+
+    public void putSignForPlayer( int x, int y) {
+        this.moves[x][y] = player;
+    }
 }

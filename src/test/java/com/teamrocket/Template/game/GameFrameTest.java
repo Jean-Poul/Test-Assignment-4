@@ -40,5 +40,6 @@ class GameFrameTest {
 
     @Test
     void drawGame() {
+        gameFrame.drawGame();
     }
 }

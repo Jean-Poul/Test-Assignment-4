@@ -35,12 +35,6 @@ public class GameFrame {
     }
 
 
-    public void makeMove() {
-        //todo Logic for making a move
-        drawGame();
-
-    }
-
     public void drawGame() {
 
 
@@ -64,4 +58,8 @@ public class GameFrame {
     }
 
 
+    public void makeMove(TicTacToe ticTacToe, String player, Integer field) {
+        //todo Logic for making a move
+        drawGame();
+    }
 }
