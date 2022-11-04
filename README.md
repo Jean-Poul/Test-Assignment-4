@@ -12,7 +12,7 @@ This assignment has been solved with **Java** and has been done with the use of 
 - PMD
 
     
-## 1.0 Mockito Powerups :power: 
+## 1.0 Mockito Powerups :computer: 
 *Answer the following questions about Mockito. Use code examples in your explanations*  
 To begin with I will have to **mock** a class which I will be using throughout all my answers. This is done with Mockito in the following way:  
 ```java
