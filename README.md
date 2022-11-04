@@ -1,5 +1,11 @@
 # Assignment 4  
+
+## Group Members
   
+- Jean-Poul Leth-Møller, cph-jl360@cphbusiness.dk  
+- Magdalena Wawrzak cph-mw216@cphbusiness.dk  
+- Tobias Zimmermann cph-tz11@cphbusiness.dk  
+     
 This assignment has been solved with **Java** and has been done with the use of BDD combined with frameworks such as:  
 - Cucumber    
 - Faker
