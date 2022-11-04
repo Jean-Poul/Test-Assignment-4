@@ -1,5 +1,11 @@
 # Assignment 4  
+
+## Group Members
   
+- Jean-Poul Leth-Møller, cph-jl360@cphbusiness.dk  
+- Magdalena Wawrzak cph-mw216@cphbusiness.dk  
+- Tobias Zimmermann cph-tz11@cphbusiness.dk  
+     
 This assignment has been solved with **Java** and has been done with the use of BDD combined with frameworks such as:  
 - Cucumber    
 - Faker
@@ -12,7 +18,7 @@ This assignment has been solved with **Java** and has been done with the use of 
 - PMD
 
     
-## 1.0 Mockito Powerups :power: 
+## 1.0 Mockito Powerups :computer: 
 *Answer the following questions about Mockito. Use code examples in your explanations*  
 To begin with I will have to **mock** a class which I will be using throughout all my answers. This is done with Mockito in the following way:  
 ```java
