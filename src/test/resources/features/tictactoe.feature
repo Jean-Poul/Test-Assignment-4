@@ -26,6 +26,12 @@ Feature: Player can start the game
       | O    | 8     | 2 | 1 |
       | O    | 9     | 2 | 2 |
 
+  Scenario:
+    Given a TicTacToe game and player with "X"
+    When the player puts a sign in fields 1, 4 and 7
+    Then the player has won
+
+
 
 
 

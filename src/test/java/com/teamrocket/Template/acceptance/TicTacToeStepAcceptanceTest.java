@@ -2,6 +2,8 @@ package com.teamrocket.Template.acceptance;
 
 import com.teamrocket.Template.game.GameFrame;
 import com.teamrocket.Template.game.TicTacToe;
+import com.teamrocket.Template.game.exception.BoardSpotAlreadyInUseException;
+import com.teamrocket.Template.game.exception.InvalidBoardSpotException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -56,12 +58,25 @@ public class TicTacToeStepAcceptanceTest {
     }
 
     @When("player puts a sign on one {int}")
-    public void player_puts_a_sign_on_one(Integer field) {
+    public void player_puts_a_sign_on_one(Integer field) throws InvalidBoardSpotException, BoardSpotAlreadyInUseException {
         gameFrame.makeMove(ticTacToe, player, field);
     }
 
     @Then("the {string} should be on {int}, {int}")
     public void the_should_be_on(String string, Integer x, Integer y) {
         assertEquals(ticTacToe.getField(x, y), string);
+    }
+
+    @When("the player puts a sign in fields {int}, {int} and {int}")
+    public void thePlayerPutsASignInFieldsAnd(int field1, int field2, int field3)
+        throws InvalidBoardSpotException, BoardSpotAlreadyInUseException {
+        gameFrame.makeMove(ticTacToe, player, field1);
+        gameFrame.makeMove(ticTacToe, player, field2);
+        gameFrame.makeMove(ticTacToe, player, field3);
+    }
+
+    @Then("the player has won")
+    public void thePlayerHasWon() {
+        assertTrue(gameFrame.hasWon(ticTacToe, player));
     }
 }
