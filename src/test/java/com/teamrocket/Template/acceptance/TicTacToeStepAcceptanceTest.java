@@ -43,7 +43,7 @@ public class TicTacToeStepAcceptanceTest {
     @When("Choosing who starts")
     public void setting_up_new_game() {
 
-        playersSign = gameFrame.assignSignToPlayer();
+        playersSign = gameFrame.assignSignToPlayer().player();
     }
 
     @Then("The one who starts should be chosen randomly")

@@ -21,22 +21,21 @@ public class GameFrame {
         return new TicTacToe(player, computer);
     }
 
-    public String assignSignToPlayer() {
+    public Sign assignSignToPlayer() {
         int computerScore = rand.nextInt(1, 7);
         int playerScore = rand.nextInt(1, 7);
         System.out.println("Computer's score: " + computerScore);
         System.out.println("Your score: " + playerScore);
         if (computerScore > playerScore) {
             System.out.println("Computer starts wit X !");
-            return "O";
+            return new Sign("O", "X");
         } else if (computerScore < playerScore) {
             System.out.println("You start wit X !");
-            return "X";
+            return new Sign("X", "O");
         } else {
             return assignSignToPlayer();
         }
     }
-
 
     public void drawGame(TicTacToe ticTacToe) {
         final String[][] frame = {
