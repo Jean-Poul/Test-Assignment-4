@@ -1,15 +1,12 @@
 package com.teamrocket.Template.game;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.teamrocket.Template.game.exception.BoardSpotAlreadyInUseException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class GameFrameTest {
@@ -32,8 +29,8 @@ class GameFrameTest {
 
     @Test
     void assignSignToPlayer() {
-        String playersSign = gameFrame.assignSignToPlayer();
-        assertTrue(playersSign.equals("X") || playersSign.equals("O"));
+        Sign playersSign = gameFrame.assignSignToPlayer();
+        assertNotSame(playersSign.player(), playersSign.computer());
     }
 
     @Test
