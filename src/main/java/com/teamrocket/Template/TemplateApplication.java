@@ -19,6 +19,7 @@ public class TemplateApplication {
         GameFrame gameFrame = new GameFrame();
         Sign sign = gameFrame.assignSignToPlayer();
         TicTacToe ticTacToe = gameFrame.startNewGame(sign.player(), sign.computer());
+        // Source
         Scanner scanner = new Scanner(System.in);
         boolean isPlaying = true;
         while (isPlaying) {
@@ -27,17 +28,22 @@ public class TemplateApplication {
                     Where do you want to put your %s?
                     Choose a field between 1 and 9
                     %n""", sign.player());
+            // Source - taint = line
             String line = scanner.nextLine();
             try {
-                int field = Integer.parseInt(line);
+                // tainted
+                int field = Integer.parseInt(line);  // Sanitizer
+                // tainted field
                 gameFrame.makeMove(ticTacToe, ticTacToe.getPlayer(), field);
                 if (gameFrame.hasWon(ticTacToe, ticTacToe.getPlayer())) {
+                    // Drawgame is a sink
                     gameFrame.drawGame(ticTacToe);
                     System.out.println("Yay you won!");
                     isPlaying = false;
                 }
                 tryMoveComputer(gameFrame, ticTacToe);
                 if (gameFrame.hasWon(ticTacToe, ticTacToe.getComputer())) {
+                    // Drawgame is a sink
                     gameFrame.drawGame(ticTacToe);
                     System.out.println("You lost to a shitty AI lol");
                     isPlaying = false;

@@ -42,7 +42,6 @@ public class TicTacToeStepAcceptanceTest {
 
     @When("Choosing who starts")
     public void setting_up_new_game() {
-
         playersSign = gameFrame.assignSignToPlayer().player();
     }
 
