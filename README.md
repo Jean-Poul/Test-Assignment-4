@@ -106,4 +106,8 @@ To run mutation test use the following command:
   
 **All generated reports can be found in the target/site/ and target/pmd/ folders.**    
   
+## 3.0 Results  
+**Tests run:**    
+![Green test](https://github.com/Jean-Poul/Test-Assignment-4/blob/main/pictures/green-test.PNG)  
+  
 High five :raised_hands:
